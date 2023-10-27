@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title> Profile Detail 1</title>
+	<link rel="stylesheet" type="text/css" href="../CSS/styleprofile.css"/>
+	
+	<style>
+		@font-face {
+			font-family: 'Tilt Neon';
+			src: url('/fonts/tiltNeon/static/TiltNeon-Regular.ttf') 
+		}
+
+		body, input, option{
+			font-family: 'Tilt Neon', sans-serif;
+		}
+
+		*:not(:focus) {
+			caret-color: transparent; 
+		}
+
+		input:focus, textarea:focus, select:focus {
+			caret-color: auto; 
+		}
+	</style>
+	
+</head>
+<body>
+
+	<div class="header">
+		<div class="wrapper">
+			<img src="../images/logo/logo_Cyrene.png" width=70 height=70 class="logoletter"/>
+			
+		</div>
+	</div>
+
+	<div class="main">
+		<div class="wrapper">
+
+		<div class="signup">
+			<!-- <h1>Join homaj today</h1> -->
+			<!-- <img src="../images/profile/profile1.png"/> -->
+			<form action="profile3.html">
+				<table id="signuptable">
+					<tr>
+						<td style="padding-top:18px;">
+							<select id="quocGia">
+							</select>
+							
+							<script>
+							var quocGiaList = [
+								"Nation", "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Argentina", "Armenia", "Australia", "Austria", "Azerbaijan", 
+								"Bangladesh", "Belgium", "Bolivia", "Brazil", "Cambodia", "Cameroon", "Canada", "Chile", "China", "Colombia", 
+								"Croatia", "Cuba", "Czech Republic", "Denmark", "Dominican Republic", "Ecuador", "Egypt", "Ethiopia", "Finland", "France", 
+								"Germany", "Ghana", "Greece", "Hungary", "India", "Indonesia", "Iran", "Iraq", "Ireland", "Israel", 
+								"Italy", "Japan", "Kenya", "Lebanon", "Malaysia", "Mexico", "Morocco", "Netherlands", "New Zealand", "Nigeria", 
+								"Norway", "Pakistan", "Peru", "Philippines", "Poland", "Portugal", "Russia", "Saudi Arabia", "Singapore", "South Africa", 
+								"South Korea", "Spain", "Sri Lanka", "Sweden", "Switzerland", "Thailand", "Turkey", "Ukraine", "United Arab Emirates", 
+								"United Kingdom", "United States", "Uruguay", "Venezuela", "Vietnam", "Other Country"
+							];
+													
+							var select = document.getElementById("quocGia");
+							
+							for (var i = 0; i < quocGiaList.length; i++) {
+								var option = document.createElement("option");
+								option.value = quocGiaList[i];
+								option.text = quocGiaList[i];
+								if (quocGiaList[i] === "Country") {
+        							option.selected = true;
+    							}
+								select.appendChild(option);
+							}
+							</script>
+							
+
+						</td>
+					</tr>
+					
+					<tr>
+						<td><input type="text" id="City" class="inputtext2" placeholder="City/Town" required/>
+					</tr>
+
+					<tr>
+						<td><input type="number" id="phoneno" class="inputtext2" placeholder="Phone " required/></td>
+					</tr>
+
+					<tr>
+						<td><input type="text" id="relation" class="inputtext2" placeholder="Relationship" /></td>
+					</tr>
+
+					<tr>
+						<td><input type="text" id="nickname" class="inputtext2" placeholder="Nick Name" /></td>
+					</tr>
+
+
+
+				
+
+
+					<tr id="nextbut">
+						<td><input id="nextbttn" type="submit" value="Next"/></td>
+					</tr>
+
+				</table>
+			</form>
+			</div>
+		</div>
+	</div>
+
+	<div id="border"></div>
+
+	<div class="footer">
+		<div class="wrapper">
+			<div class="foot">
+				<ul>
+					<li><a href="">About</a></li>
+					<li><a href="">Contact</a></li>
+					<li><a href="">Privacy and Policy</a></li>
+					<li><a href="">Help</a></li>
+				</ul>
+				<p>Copyright © www.cyrene.com 2023 All Rights Reserved.</p>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

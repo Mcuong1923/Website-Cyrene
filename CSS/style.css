@@ -1,0 +1,322 @@
+
+body{
+	height: 100%;
+	margin:0px;
+	padding:0px;
+}
+
+.wrapper
+{
+	margin: 0 auto;
+	width: 960px;
+	height: 100%;
+}
+
+/*========HEADER SECTION ===========*/
+
+.header
+{
+	width: 100%;
+	height: 85px;
+	background-color: black;
+}
+
+
+.logoletter
+{
+	margin-top:7px;
+	margin-bottom:5px;
+	margin-left: -45px;
+	cursor: pointer;
+}
+
+
+.loginuser /*--FORM--*/
+{
+	float:right;
+	margin-top: 8px;
+	color: white;
+	font-size: 14px;
+}
+
+#login tr td .inputtext 
+{
+	border: 1px solid #FEADB9;
+	width: 145px;
+	height: 30px;
+	border-radius: 10px;
+	box-sizing: border-box;
+	outline: none;
+}
+/* 
+#login tr td .inputtext:focus {
+	border: 1px solid black;
+} */
+
+
+#login tr td 
+{
+	border: 0px;
+	padding: 0px;
+	padding-left: 8px;
+}
+
+#login a:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+#logpassword
+{
+	/* font-size: 10px; */
+}
+
+#loginbutton
+{
+	border: 1px solid #CF526F;
+	background-color: #CF526F;
+	height: 22px;
+	color:black;
+	font-size:14px;
+	font-weight: bold;
+	border-radius: 15px ;
+}
+
+#loginbutton:hover
+{
+	background-color: black;
+	color: #CF526F;
+	border: 1px solid #CF526F;
+	cursor: pointer;
+}
+
+#loginbutton:active
+{
+	/* transform: translateX(3px); */
+	/* box-shadow: 1px 1px 0px #CF526F; */
+}
+
+
+
+/*==========MAIN SECTION ========*/
+
+.main
+{
+	
+	width: 100%;
+	height: 100%;
+	background-color: white;
+	padding-bottom: 7%;
+	clear: right;
+}
+
+.logopic
+{
+	position: relative;
+	margin-top: 8%;
+	margin-left: 8%;
+	width: 350px;
+	height: 350px;
+	opacity: 1.0;
+	cursor: pointer;
+}
+
+.logopic:hover
+{
+	/* opacity: 0.5; */
+}
+
+.signup /* ---- SIGNUP SECTION --- */
+{
+	float:right;
+	font-size: 18px;
+	/* margin-left: 50px; */
+}
+
+
+.signup h1 /*---- SIGNUP HEADING --*/
+{
+	font-size: 45px;
+	margin: 0px;
+	padding-top: 10%;
+	padding-bottom: 4%;
+}
+
+#signup table  { /* ---- SIGN UP FORM --- */
+	margin-top:  5px ;
+}
+
+#signup table td {
+	padding-bottom: 12px;
+	
+}
+
+#signup #signuptable .inputext1 {
+	width: 169px;
+	height: 30px;
+	outline: none;
+}
+
+#signup #signuptable .inputext2 {
+	width: 350px;
+	height: 30px;
+	outline: none;
+}
+
+#signup .gender {
+	border: 1px solid black;
+	border-radius: 3px ;
+	display: inline-flex;
+	justify-content: space-between;
+	width: 114.5px;
+	height: 32px;
+}
+
+#signup .inputgender input[radio]{
+	margin-left: 20px ;
+	display: block;
+}
+
+.dob {
+	margin-left: 3px;
+	margin-bottom: 12px;
+}
+
+.dob .ntn{
+	width: 114.5px; 
+	height: 34px;
+	margin-right: 2px;
+	
+}
+
+#signup #signupbutton {
+	margin-top: 10px;
+	margin-left: 98px;
+	width: 170px;
+	height: 40px;
+	font-weight: bold;
+	border: 0.5px solid #CF526F;
+	border-radius: 10px;
+	background-color: black;
+	color: #CF526F;
+	
+}
+
+#signup #signupbutton:hover {
+	background: white;
+	cursor: pointer;
+}
+
+
+#joinnowbttn /*---JOING NOW BUTTON ---*/
+{
+
+	border:0px;
+	width: 100%;
+	height: 34px;
+	font-size: 18px;
+	background-color: #00aeef;
+	color:white;
+	box-shadow: 0 6px 4px #999;
+}
+
+#joinnowbttn:hover
+{
+	background-color: #4F82C3;
+}
+
+#joinnowbttn:active
+{
+  background-color: #2196F3;
+  box-shadow: 0 5px 4px #666;
+  transform: translateY(8px);
+}
+
+#joinbut
+{
+	height: 130px;
+}
+
+
+/*====== FOOTER ===========*/
+
+#border {
+	display: block;
+	align-items: center;
+	margin: 0 auto;
+	margin-bottom: 20px;
+	width: 400px;
+	border-top: 1px solid gray;
+}
+
+.footer
+{
+	/*height: 40px;*/
+}
+
+.foot
+{
+	background-color: white;
+	text-align: center;
+}
+
+
+.foot ul
+{
+	padding: 5px;
+	list-style-type: none;
+	text-align: center;
+	margin: 10px;
+	border-radius: 5px;
+	
+}
+
+.foot ul li
+{
+	display: inline;
+}
+
+.foot ul li a
+{
+	text-decoration: none;
+	padding: 10px;
+	color: #615D5E;
+	font-size: 16px;
+}
+
+.foot ul li a:hover
+{
+	color: #CF526F;
+	font-size: 17px;
+	text-decoration: underline;
+}
+
+.foot p
+{
+	/* font-weight: bold; */
+	color: #666666;
+	text-align: center;
+	padding-bottom: 2%;
+	padding-top: 8px;
+	font-size: 16px;
+}
+
+.logoletter:hover
+{
+	animation: shake 0.5s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}

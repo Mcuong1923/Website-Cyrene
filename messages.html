@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cyrene Mess</title>
+	<!-- CSS and JavaScript references -->
+	<link rel="stylesheet" type="text/css" href="CSS/header.css">
+	<link rel="stylesheet" type="text/css" href="CSS/messages.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="../javascript/header.js"></script>
+	<script src="./javascript/message.js"></script>
+	<!-- Ending of CSS and JavaScrit -->
+
+	<style>
+		@font-face {
+			font-family: 'Tilt Neon';
+			src: url('../fonts/tiltNeon/static/TiltNeon-Regular.ttf') 
+		}
+
+		button,html,
+		*{
+			font-family: 'Tilt Neon';
+		}
+
+		*:not(:focus) {
+			caret-color: transparent; 
+		}
+
+		input:focus, textarea:focus, select:focus {
+			caret-color: auto; 
+		}
+	</style>
+
+</head>
+<body onload="loadcontact()">
+	
+	<!-- Header start -->
+	<div class="header">
+		<!-- Wrapper start of heading-->
+		<div class="wrapper">
+			<div class="home-search">
+				<!-- logo -->
+				<a href="home.html"><img src="./images/logo/logo_Cyrene.png" width=35 height=35 class="logoletter"/></a>
+				<!-- Search bar -->
+				<form id="searching">
+					<input type="text" name="search" placeholder="Search.." id="search">
+				</form>
+			</div>
+			
+			<!-- icon bar to navigate to all pages -->
+			<div > 
+				<ul class="icon-bar">
+					<!-- home -->
+					<li ><a href="home.html" onmouseover="headerchange(1);" onmouseout="headerorigin(1);"><img src="./images/icon/6b-home.png" id="Cyrene-home"></a></li>
+					<!-- profile -->
+					<li > <a href="profile.html" onmouseover="headerchange(2);" onmouseout="headerorigin(2);"><img  src="./images/icon/6b-user.png" id="Cyrene-profile"></a> </li>
+					<!-- society -->
+					<li><a href="society.html" onmouseover="headerchange(3);" onmouseout="headerorigin(3);"><img src="images/icon/6b-group.png" id="Cyrene-society"></a></li>
+					<!-- message -->
+					<li > <a href="messages.html" onmouseover="headerchange(4);" onmouseout="headerorigin(4);"><img style="border-bottom: 3px solid #CF526F;" src="images/icon/Cyrene-chat.png" id="Cyrene-message"></a></li>
+					<!-- notification -->
+				</ul>	 
+			</div>
+			
+			
+			<!-- Notification and Myprofile -->
+			<div class="noti-info">
+				<a id="notifications" href="#" >
+					<img src="images/icon/6b-ring.png" id="Cyrene-notification"></a>
+					<div>
+						<div id="notify">
+							<div class="noti-list">
+								<div class="dropdowns">
+									<span>4 New Notifications <a href="#" title="">Mark all as read</a></span>
+									<ul class="drops-menu">
+										<li>
+											<a href="#" title="">
+												<figure>
+													<img src="./images/avatar/tretrau.jpg" alt="">
+													<span class="status"></span>
+												</figure>
+												<div class="mesg-meta">
+													<h4>Mạnh Cường</h4>
+													<span>commented on your new profile status</span>
+													<i>2 min ago</i>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#" title="">
+												<figure>
+													<img src="./images/avatar/Hanh.jpg" alt="">
+													<span class="status"></span>
+												</figure>
+												<div class="mesg-meta">
+													<h4>Anh Nguyễn</h4>
+													<span>Nicholas Grissom just became friends. Write on his wall.</span>
+													<i>4 hours ago</i>
+													<figure>
+														<span>Today is Anh Nguyen's Birthday! wish for celebrating</span>
+														<img src="./images/icon/Cyrenre-birthday.png" alt="">
+													</figure>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#" title="">
+												<figure>
+													<img src="images/avatar/linh.jpg" alt="">
+													<span class="status"></span>
+												</figure>
+												<div class="mesg-meta">
+													<h4>Nguyễn Linh</h4>
+													<span>commented on your photo.</span>
+													<i>Sunday</i>
+													<figure>
+														<span>"Celebrity looks Beautiful in that outfit! We should see each"</span>
+														<img src="../images/icon/Cyrenre-cool.png" alt="">
+													</figure>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#" title="">
+												<figure>
+													<img src="../images/avatar/mew.jpg" alt="">
+													<span class="status"></span>
+												</figure>
+												<div class="mesg-meta">
+													<h4>Quang Huy</h4>
+													<span>nvited you to attend to his event Goo in</span>
+													<i>May 19</i>
+												</div>
+											</a>
+											<!-- <span class="tag">New</span> -->
+										</li>
+										<li>
+											<a href="#" title="">
+												<figure>
+													<img src="../images/avatar/default.jpg" alt="">
+													<span class="status"></span>
+												</figure>
+												<div class="mesg-meta">
+													<h4>Amy</h4>
+													<span>Andrew Changed his profile picture. </span>
+													<i>dec 18</i>
+												</div>
+											</a>
+											<!-- <span class="tag">New</span> -->
+										</li><li>
+											<a href="#" title="">
+												<figure>
+													<img src="../images/avatar/depzai.jpg" alt="">
+													<span class="status"></span>
+												</figure>
+												<div class="mesg-meta">
+													<h4>sarah Loren</h4>
+													<span>commented on your new profile status</span>
+													<i>oct 2</i>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#" title="">
+												<figure>
+													<img src="../images/avatar/default.jpg" alt="">
+													<span class="status"></span>
+												</figure>
+												<div class="mesg-meta">
+													<h4>Jhon doe</h4>
+													<span>Nicholas Grissom just became friends. Write on his wall.</span>
+													<i>nov 30</i>
+													<figure>
+														<span>Today is Marina Valentine’s Birthday! wish for celebrating</span>
+														<img src="../images/icon/Cyrenre-birthday.png" alt="">
+													</figure>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#" title="">
+												<figure>
+													<img src="../images/avatar/default.jpg" alt="">
+													<span class="status"></span>
+												</figure>
+												<div class="mesg-meta">
+													<h4>Andrew</h4>
+													<span>commented on your photo.</span>
+													<i>Sunday</i>
+													<figure>
+														<span>nvited you to attend to his event Goo in</span>
+														
+													</figure>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#" title="">
+												<figure>
+													<img src="../images/avatar/pngwing.com (4).png" alt="">
+													<span class="status"></span>
+												</figure>
+												<div class="mesg-meta">
+													<h4>Tom cruse</h4>
+													<span>nvited you to attend to his event Goo in</span>
+													<i>May 19</i>
+												</div>
+											</a>
+											<span class="tag">New</span>
+										</li>
+										<li>
+											<a href="#" title="">
+												<figure>
+													<img src="../images/avatar/default.jpg" alt="">
+													<span class="status"></span>
+												</figure>
+												<div class="mesg-meta">
+													<h4>Amy</h4>
+													<span>Andrew Changed his profile picture. </span>
+													<i>dec 18</i>
+												</div>
+											</a>
+											<span class="tag">New</span>
+										</li>
+									</ul>
+									<a href="#" title="" class="more-mesg">View All</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<img class="avt-header" id="avt-header" src="images/photo6.png" alt="">
+					<div class="end-bt-hd" id="end-bt-hd">
+						<div> 
+							<i class="fa fa-cogs"></i><a href="#" >Setting & privacy</a>
+						</div>
+						<div>
+							<i class="fa fa-question-circle"></i><a href="#">Help & support</a>
+						</div>
+						<div>
+							<i class="fa fa-commenting-o"></i><a href="#">Give feedback</a>
+						</div>
+						<div>
+							<i class="fa fa-moon-o" ></i><a style="padding-left: 0;" href="#">Display & Accessibility</a>
+						</div>
+						<div>
+							<i class="fa fa-bars"></i><a href="#">Activity Log</a>
+						</div>
+						<div>
+							<i class="fa fa-sign-out"></i><a href="index.html">Log out</a>
+						</div>
+					</div>
+			</div>
+<!-- todotodo -->
+
+		</div>
+		<!-- Wrapper End of heading -->
+
+	</div>
+	<!-- End of header -->
+
+	<!-- Content Section -->
+	<div class="content" style="margin: 0;">
+		<!-- Start wrapper -->
+		<div>
+
+
+			<!-- start of main content section -->
+			<div class="mainnotfixed">
+				<!-- Start of left contact section -->
+				<div class="contact">	
+				<!-- heading messaging -->
+				<div class="headmsg">
+					<p style="color: white; font-family: 'Arial Black', Gadget, sans-serif; font-weight: bold;">Messaging</p>
+				</div>
+
+				<!-- contact section content -->
+				<div class="leftcontent">
+					<!-- Search bar -->
+					<form id="contactsearch">
+					  <input type="text" name="search" placeholder="Search.." id="searchcontact">
+					</form>
+
+					<!-- Contacts -->
+					<div class="contacts">
+						<!-- users -->
+						<div class="contactuser" style="border-left: 8px solid #CF526F; margin-top: 18px;" onclick="select(1)">
+							<img src="./images/photo7.jpg" class="contimg">
+							<p class="name">Khắc Cường</p>
+						</div>
+
+						<div class="contactuser" onclick="select(2);">
+							<img src="./images/1.png" class="contimg"/>
+							<p class="name">Thanh An</p>
+						</div>
+
+						<div class="contactuser" onclick="select(3);">
+							<img src="./images/avatar/baoAn.jpg" class="contimg"/>
+							<p class="name">Bao An</p>
+						</div>
+
+						<div class="contactuser" onclick="select(4);">
+							<img src="./images/avatar/dua.jpg" class="contimg"/>
+							<p class="name">Linh ly</p>
+						</div>
+
+						<div class="contactuser" onclick="select(5);">
+							<img src="./images/avatar/aphuong.jpg" class="contimg"/>
+							<p class="name">Minh Phuong</p>
+						</div>
+
+						<div class="contactuser" onclick="select(6);">
+							<img src="./images/avatar/gucci.jpg" class="contimg"/>
+							<p class="name">Gucci shop</p>
+						</div>
+
+						<div class="contactuser" onclick="select(7);">
+							<img src="./images/avatar/Hanh.jpg" class="contimg"/>
+							<p class="name">Duy Tan</p>
+						</div>
+
+						<div class="contactuser" onclick="select(8);">
+							<img src="./images/avatar/default.jpg" class="contimg"/>
+							<p class="name">Van Hau</p>
+						</div>
+
+						<div class="contactuser" onclick="select(9);">
+							<img src="./images/avatar/pho.webp" class="contimg"/>
+							<p class="name">Quang Anh</p>
+						</div>
+
+						<div class="contactuser" onclick="select(10);">
+							<img src="./images/avatar/mew.jpg" class="contimg"/>
+							<p class="name">Van Cuong</p>
+						</div>
+
+						<div class="contactuser" onclick="select(11);">
+							<img src="./images/avatar/default.jpg" class="contimg"/>
+							<p class="name">User Name</p>
+						</div>
+
+						<div class="contactuser" onclick="select(12);">
+							<img src="./images/avatar/default.jpg" class="contimg"/>
+							<p class="name">User Name</p>
+						</div>
+
+						<div class="contactuser" onclick="select(13);">
+							<img src="./images/avatar/default.jpg" class="contimg"/>
+							<p class="name">User Name</p>
+						</div>
+
+						<div class="contactuser" onclick="select(14);">
+							<img src="./images/avatar/default.jpg" class="contimg"/>
+							<p class="name">User Name</p>
+						</div>
+
+						<div class="contactuser" onclick="select(15);">
+							<img src="./images/avatar/default.jpg" class="contimg"/>
+							<p class="name">User Name</p>
+						</div>
+						<!-- End user -->
+
+					</div>
+					<!-- End contacts -->
+
+				</div>
+				<!-- End contact section -->				  
+			    </div>
+				<!-- End of left contact section -->
+				
+
+				<!-- Start of right chat section -->
+				<div class="chat">
+				<!-- heading chat user -->
+				<div class="chatuser">
+					<!-- heading chat user name and pic -->
+					<img src="./images/photo7.jpg" class="chatimg"/>
+							<p class="viewname">Khắc Cường</p>
+							<i class="fa fa-phone" style="font-size: 20px; color: gray;"></i>
+                            <i class="fa fa-video-camera" style="font-size: 20px; color: gray;"></i>
+                            <i class="fa fa-search" style="font-size: 20px; color: gray;"></i>
+				</div>
+				<!-- End of chat user heading -->
+
+				<!-- chat msg start -->
+				<div class="chatmsg">
+					
+					<div class="received">
+						<p>Ê cu</p>
+					</div>
+
+					<div class="send">
+						<p>sao? </p>
+					</div>
+
+					<div class="received">
+						<p>Mai học không?</p>
+					</div>
+
+				</div>
+				<!-- End of chat msg -->
+
+				<!-- to send msg box and button -->
+				<div class="sendmessage">
+					<button class="icon"><i class="fa fa-smile-o" style="margin-right: 50px;"></i></button>
+					<textarea id="textarea" placeholder="Nhập tin nhắn..."></textarea>
+					<p id="sendsymbol" onclick="sendmsg();">&#x27A4;</p>
+				</div>
+				<!-- end of msg box -->
+
+				</div>
+				<!-- End of right chat section -->
+		
+			</div>
+			<!-- End of main content section -->
+			
+
+
+		</div>
+		<!-- End of wrapper -->
+
+	</div>
+	<!-- End of content section -->
+		</div>
+		<div class="overlay" @click="rightSide = false; leftSide = false" :class="{ 'active': rightSide || leftSide }"></div>
+	</div>
+</body>
+<script>
+	// sending msg when Enter key is pressed
+	textarea.addEventListener("keypress", function (event) {
+	  if (event.key === "Enter") {
+		event.preventDefault(); // Ngăn chặn dấu xuống dòng mặc định của textarea
+		sendmsg();
+	  }
+	});
+	</script>
+</html>

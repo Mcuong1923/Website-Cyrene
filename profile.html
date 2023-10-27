@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cyrene profile </title>
+	<!-- CSS and JavaScript references -->
+	<link rel="stylesheet" type="text/css" href="CSS/header.css">
+	<link rel="stylesheet" type="text/css" href="CSS/profile.css">
+	<script src="https://kit.fontawesome.com/yourkitcode.js" crossorigin="anonymous"></script>
+	<!-- <script src="../javascript/header.js"></script> -->
+	<script src="./javascript/profilescript.js"></script>
+    <script src="https://kit.fontawesome.com/ef7e2b893b.js" crossorigin="anonymous"></script>
+
+	<!-- Ending of CSS and JavaScrit -->
+
+	<style>
+		@font-face {
+			font-family: 'Tilt Neon';
+			src: url('../fonts/tiltNeon/static/TiltNeon-Regular.ttf') 
+		}
+
+		button,html,
+		*{
+			font-family: 'Tilt Neon';
+		}
+
+		*:not(:focus) {
+			caret-color: transparent; 
+		}
+
+		input:focus, textarea:focus, select:focus {
+			caret-color: auto; 
+		}
+	</style>
+</head>
+<body  onload="showSlides(1);">
+		<!-- Header section -->
+		<!-- Header start -->
+		<div class="header">
+			<!-- Wrapper start of heading-->
+			<div class="wrapper">
+				<div class="home-search">
+					<!-- logo -->
+					<a href="home.html"><img src="./images/logo/logo_Cyrene.png" width=35 height=35 class="logoletter"/></a>
+					<!-- Search bar -->
+					<form id="searching">
+						<input type="text" name="search" placeholder="Search.." id="search">
+					</form>
+				</div>
+				
+				<!-- icon bar to navigate to all pages -->
+				<div > 
+					<ul class="icon-bar" style="padding-left: 40px;">
+						<!-- home -->
+						<li ><a href="home.html" onmouseover="headerchange(1);" onmouseout="headerorigin(1);"><img src="./images/icon/6b-home.png" id="Cyrene-home"></a></li>
+						<!-- profile -->
+						<li > <a href="profile.html" onmouseover="headerchange(2);" onmouseout="headerorigin(2);"><img style="border-bottom: 3px solid #CF526F;" src="images/icon/Cyrene-user.png" id="Cyrene-profile"></a> </li>
+						<!-- society -->
+						<li><a href="society.html" onmouseover="headerchange(3);" onmouseout="headerorigin(3);"><img src="images/icon/6b-group.png" id="Cyrene-society"></a></li>
+						<!-- message -->
+						<li > <a href="messages.html" onmouseover="headerchange(4);" onmouseout="headerorigin(4);"><img src="images/icon/6b-chat.png" id="Cyrene-message"></a></li>
+						<!-- notification -->
+					</ul>	 
+				</div>
+				
+				
+				<!-- Notification and Myprofile -->
+				<div class="noti-info">
+					<a id="notifications" href="#" >
+						<img src="images/icon/6b-ring.png" id="Cyrene-notification"></a>
+						<div>
+							<div id="notify">
+								<div class="noti-list">
+									<div class="dropdowns">
+										<span>4 New Notifications <a href="#" title="">Mark all as read</a></span>
+										<ul class="drops-menu">
+											<li>
+												<a href="#" title="">
+													<figure>
+														<img src="../images/avatar/tretrau.jpg" alt="">
+														<span class="status"></span>
+													</figure>
+													<div class="mesg-meta">
+														<h4>Mạnh Cường</h4>
+														<span>commented on your new profile status</span>
+														<i>2 min ago</i>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="#" title="">
+													<figure>
+														<img src="../images/avatar/Hanh.jpg" alt="">
+														<span class="status"></span>
+													</figure>
+													<div class="mesg-meta">
+														<h4>Anh Nguyễn</h4>
+														<span>Nicholas Grissom just became friends. Write on his wall.</span>
+														<i>4 hours ago</i>
+														<figure>
+															<span>Today is Anh Nguyen's Birthday! wish for celebrating</span>
+															<img src="../images/icon/Cyrenre-birthday.png" alt="">
+														</figure>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="#" title="">
+													<figure>
+														<img src="images/avatar/linh.jpg" alt="">
+														<span class="status"></span>
+													</figure>
+													<div class="mesg-meta">
+														<h4>Nguyễn Linh</h4>
+														<span>commented on your photo.</span>
+														<i>Sunday</i>
+														<figure>
+															<span>"Celebrity looks Beautiful in that outfit! We should see each"</span>
+															<img src="../images/icon/Cyrenre-cool.png" alt="">
+														</figure>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="#" title="">
+													<figure>
+														<img src="../images/avatar/mew.jpg" alt="">
+														<span class="status"></span>
+													</figure>
+													<div class="mesg-meta">
+														<h4>Quang Huy</h4>
+														<span>nvited you to attend to his event Goo in</span>
+														<i>May 19</i>
+													</div>
+												</a>
+												<!-- <span class="tag">New</span> -->
+											</li>
+											<li>
+												<a href="#" title="">
+													<figure>
+														<img src="../images/avatar/default.jpg" alt="">
+														<span class="status"></span>
+													</figure>
+													<div class="mesg-meta">
+														<h4>Amy</h4>
+														<span>Andrew Changed his profile picture. </span>
+														<i>dec 18</i>
+													</div>
+												</a>
+												<!-- <span class="tag">New</span> -->
+											</li><li>
+												<a href="#" title="">
+													<figure>
+														<img src="images/avatar/tretrau.jpg" alt="">
+														<span class="status"></span>
+													</figure>
+													<div class="mesg-meta">
+														<h4>sarah Loren</h4>
+														<span>commented on your new profile status</span>
+														<i>oct 2</i>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="#" title="">
+													<figure>
+														<img src="./images/avatar/default.jpg" alt="">
+														<span class="status"></span>
+													</figure>
+													<div class="mesg-meta">
+														<h4>Jhon doe</h4>
+														<span>Nicholas Grissom just became friends. Write on his wall.</span>
+														<i>nov 30</i>
+														<figure>
+															<span>Today is Marina Valentine’s Birthday! wish for celebrating</span>
+															<img src="../images/icon/Cyrenre-birthday.png" alt="">
+														</figure>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="#" title="">
+													<figure>
+														<img src="../images/avatar/default.jpg" alt="">
+														<span class="status"></span>
+													</figure>
+													<div class="mesg-meta">
+														<h4>Andrew</h4>
+														<span>commented on your photo.</span>
+														<i>Sunday</i>
+														<figure>
+															<span>nvited you to attend to his event Goo in</span>
+															
+														</figure>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="#" title="">
+													<figure>
+														<img src="../images/avatar/pngwing.com (4).png" alt="">
+														<span class="status"></span>
+													</figure>
+													<div class="mesg-meta">
+														<h4>Tom cruse</h4>
+														<span>nvited you to attend to his event Goo in</span>
+														<i>May 19</i>
+													</div>
+												</a>
+												<span class="tag">New</span>
+											</li>
+											<li>
+												<a href="#" title="">
+													<figure>
+														<img src="../images/avatar/default.jpg" alt="">
+														<span class="status"></span>
+													</figure>
+													<div class="mesg-meta">
+														<h4>Amy</h4>
+														<span>Andrew Changed his profile picture. </span>
+														<i>dec 18</i>
+													</div>
+												</a>
+												<span class="tag">New</span>
+											</li>
+										</ul>
+										<a href="#" title="" class="more-mesg">View All</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<img class="avt-header" id="avt-header" src="images/photo6.png" alt="">
+						<div class="end-bt-hd" id="end-bt-hd">
+							<div> 
+								<i class="fa fa-cogs"></i><a href="#" >Setting & privacy</a>
+							</div>
+							<div>
+								<i class="fa fa-question-circle"></i><a href="#">Help & support</a>
+							</div>
+							<div>
+								<i class="fa fa-commenting-o"></i><a href="#">Give feedback</a>
+							</div>
+							<div>
+								<i class="fa fa-moon-o" ></i><a style="padding-left: 0;" href="#">Display & Accessibility</a>
+							</div>
+							<div>
+								<i class="fa fa-bars"></i><a href="#">Activity Log</a>
+							</div>
+							<div>
+								<i class="fa fa-sign-out"></i><a href="index.html">Log out</a>
+							</div>
+						</div>
+				</div>
+<!-- todotodo -->
+
+			</div>
+			<!-- Wrapper End of heading -->
+
+		</div>
+		<!-- End of header -->
+
+	<!-- End of header section -->
+
+		<script>
+
+			document.querySelector('#notifications').addEventListener('click', () => {
+				var notifyElement = document.querySelector('#notify');
+				if (notifyElement.style.display === 'block') {
+					notifyElement.style.display = 'none';
+				} else {
+					notifyElement.style.display = 'block';
+				}
+			});
+
+			document.querySelector('#avt-header').addEventListener('click', () => {
+				var notifyElement = document.querySelector('.end-bt-hd');
+				if (notifyElement.style.display === 'block') {
+					notifyElement.style.display = 'none';
+				} else {
+					notifyElement.style.display = 'block';
+				}
+			});
+	
+		</script>
+
+	<div class="profile-container">
+        <!-- <img src="anhbia" class="coverImage" alt="">
+        <div class="dashboard">
+            <div class="left-dashboard">
+                <img src="" alt="">
+                <div class="left-dashboard-info">
+                    <h3>Jack Nichoson</h3>
+                    <p>120 Friends - 20 mutuals</p>
+                    <div class="mutual-friend-images">
+                        <img src="images/member-1.png" alt="">
+                        <img src="images/member-2.png" alt="">
+                        <img src="images/member-3.png" alt="">
+                        <img src="images/member-5.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="right-dashboard-info">
+                <div class="right-dashboard-info-top">
+
+                    <button type="button"><i class="fas fa-user-plus"></i> Friends</button>
+                    <button type="button"><i class="far fa-envelope"></i> messages</button>
+                </div>
+                <div class="right-div-single-logo"> <a href="#"> <i class="fas fa-ellipsis-h"></i></a></div>
+            </div>
+        </div> -->
+
+        <!-- area of slide show -->
+				<div class="slideshowcontainer">
+					
+					<!-- change slideshow image -->
+					<input type="file" name="pic" class="chooseslide" accept="image/*" title="change slideshow image" onchange="loadFile(event)" onmouseover="stoptime()" onmouseout="starttime()"/>
+					<button type="button" class="imgbttn" id="imgbttn" style="background-color: black; color: rgb(207, 82, 111); font-family: Tilt Neon;">📷 Images</button>
+					<!-- end of change slideshow image -->
+
+					<div class="bubble">
+					<span class="dot" onclick="currentslide(1)"></span>
+					<span class="dot" onclick="currentslide(2)"></span>
+					<span class="dot" onclick="currentslide(3)"></span>
+					</div>
+
+					<!-- sildeshow images -->
+					<div class="singleslide">
+						<div class="number">1/3</div>
+						<img src="images/avatar/pro-back.jpg" class="slidimg"/>
+					</div>
+					<div class="singleslide">
+						<div class="number">2/3</div>
+						<img src="images/avatar/pro-back2.jpg" class="slidimg"/>
+					</div>
+					<div class="singleslide">
+						<div class="number">3/3</div>
+						<img src="images/avatar/pro-back3.jpg" class="slidimg"/>
+					</div>
+					<!-- End of slideshow images -->
+
+					<!-- prev and next button to change slideshow -->
+					<div class="prev" onclick="plusSlides(-1);">&#10094;</div>
+       				<div class="next" onclick="plusSlides(1);">&#10095;</div>
+				</div>
+				<!-- End area of slideshow -->
+                <!-- start sidebar left profile -->
+				<div class="sidebarleftprofile">
+					<div class="right-dashboard-info">
+						<div class="right-dashboard-info-top">
+							<div class="anhdaidien">
+								<img src="./images/avatar/mew.jpg" title="Profile Pic" class="profilepic"/>
+								<!-- change image -->
+								<input type="file" name="pic" class="chooseslide1" accept="image/*" onchange="loadFile1(event)" title="change profile pic"/>
+								<i class="fas fa-camera"></i>
+								<!-- End change image -->
+								<div class="name" >
+									<p id="sidename">  Mạnh Cường </p>
+									<p id="sidename" style="font-size: 14px;color: grey; font-family: 'Arial', sans-serif;">626 bạn bè</p>
+								</div>
+							</div>
+							<div class="btn">
+								<button type="button">
+									<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+										<style>svg{fill:#000}</style>
+										<path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/>
+									</svg> Add story 
+								</button>
+								<button type="button"><i class="fas fa-edit"></i> Edit profile</button>
+							</div>
+							
+						</div>
+						<div class="right-div-single-logo"> 
+							<div class="nav">
+								<ul>
+									<li><button style="border-bottom: 3px solid rgb(8, 102, 255);"><a href="" style="color: rgb(8, 102, 255);">Bài viết</a></button></li>
+									<li><button><a href="">Giới thiệu</a></button></li>
+									<li><button><a href="">Bạn bè</a></button></li>
+									<li><button><a href="">Ảnh</a></button></li>
+									<li><button><a href="">Video</a></button></li>
+									<li><button><a href="">Check in</a></button></li>
+									<li><button><a href="">Xem thêm</a></button></li>
+									<li style="float: inline-end; line-height: 54px;"><a href="#"><i class="fas fa-ellipsis-h"></i></a></li>
+								</ul>
+							</div>
+							
+						</div>
+					</div>
+					
+				</div>
+				
+				<!-- End of sidebar left profile -->
+
+
+        <div class="container content-profile-container">
+            <div class="left-sidebar profile-left-sidebar">
+                <div class="left-profile-sidebar-top">
+                    <div class="intro-bio">
+                        <h4>Introduce</h4>
+                        <p>Your future financial freedom <i class="far fa-smile-beam"></i></p>
+                        <hr>
+                    </div>
+                    <div class="background-details">
+                        <a href="#"><i class="fas fa-briefcase"></i>
+                            <p>Freelancer on Binance</p>
+                        </a>
+                        <a href="#"><i class="fas fa-graduation-cap"></i>
+                            <p>Studied at University of Oxford</p>
+                        </a>
+                        <a href="#"><i class="fas fa-user-graduate"></i>
+                            <p>Studying Information of Technology (IT) at Phenikaa University</p>
+                        </a>
+                        <a href="#"><i class="fas fa-home"></i>
+                            <p>Lives in Quynh luu,Nghe An</p>
+                        </a>
+                        <a href="#"><i class="fas fa-map-marker-alt"></i>
+                            <p>From in Vietnamese</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="left-profile-sidebar-top gallery">
+                    <div class="heading-link profile-heading-link">
+                        <h4>Photos</h4>
+                        <a href="">All Photos</a>
+                    </div>
+
+                    <div class="gallery-photos">
+                        <div class="gallery-photos-rowFirst">
+                            <img src="images/photo1.png" alt="">
+                            <img src="images/photo2.png" alt="">
+                            <img src="images/photo3.png" alt="">
+                    
+                            <img src="images/photo4.png" alt="">
+                            <img src="images/photo5.png" alt="">
+                            <img src="images/photo6.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="left-profile-sidebar-top gallery">
+                    <div class="heading-link profile-heading-link">
+                        <h4>Friends</h4>
+                        <a href="">All Friends</a>
+                    </div>
+
+                    <div class="gallery-photos">
+                        <div class="gallery-photos-rowFirst">
+                            <div class="first-friend">
+                                <img src="images/member-1.png" alt="">
+                                <p>Thanh An</p>
+                            </div>
+                            <div class="second-friend">
+                                <img src="images/member-1.png" alt="">
+                                <p>Hoang Anh</p>
+                            </div>
+                            <div class="third-friend">
+                                <img src="images/member-1.png" alt="">
+                                <p>Khac Cuong</p>
+                            </div>
+                            <div class="forth-friend">
+                                <img src="images/member-1.png" alt="">
+                                <p>Duc Viet</p>
+                            </div>
+                            <div class="fifth-friend">
+                                <img src="images/member-1.png" alt="">
+                                <p>Vinh Pham</p>
+                            </div>
+                            <div class="sixth-friend">
+                                <img src="images/member-1.png" alt="">
+                                <p>Duc Toan</p>
+                            </div>
+                            <div class="seventh-friend">
+                                <img src="images/member-1.png" alt="">
+                                <p>Duy Tan</p>
+                            </div>
+                            <div class="eighth-friend">
+                                <img src="images/member-1.png" alt="">
+                                <p>Pham Dung</p>
+                            </div>
+                            <div class="ninth-friend">
+                                <img src="images/member-1.png" alt="">
+                                <p>Huu Duc</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- main-content------- -->
+
+            <div class="content-area profile-content-area">
+                <div class="write-post-container">
+                    <div class="user-profile">
+                        <img src="images/avatar/mew.jpg" alt="">
+                        <div>
+                            <p> Mạnh Cường</p>
+                            <small>Public <i class="fas fa-caret-down"></i></small>
+                        </div>
+                    </div>
+
+                    <div class="post-upload-textarea">
+                        <textarea name="" placeholder="What's on your mind, Cuong?" id="" cols="30" rows="3"></textarea>
+                        <div class="add-post-links">
+                            <a href="#"><img src="images/live-video.png" alt="">Live Video</a>
+                            <a href="#"><img src="images/photo.png" alt="">Photo/Video</a>
+                            <a href="#"><img src="images/feeling.png" alt="">Feeling Activity</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="status-field-container write-post-container">
+                    <div class="user-profile-box">
+                        <div class="user-profile">
+                            <img src="images/avatar/mew.jpg" alt="">
+                            <div>
+                                <p> Manh Cuong</p>
+                                <small>October 19 2023, 09.18 pm</small>
+                            </div>
+                        </div>
+                        <div>
+                            <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                        </div>
+                    </div>
+                    <div class="status-field">
+                        <p>If in the end it's the right person, then it's okay to be a little late. <a
+                                href="#">#This_Post_is_Better!!!!</a>
+                        </p>
+                        <img src="images/status.jpg" alt="">
+
+                    </div>
+                    <div class="post-reaction">
+                        <div class="activity-icons">
+                            <div><img src="images/like-blue.png" alt="">1200</div>
+                            <div><img src="images/comments.png" alt="">52</div>
+                            <div><img src="images/share.png" alt="">35</div>
+                        </div>
+                        <div class="post-profile-picture">
+                            <img src="images/avatar/mew.jpg " alt=""> <i class=" fas fa-caret-down"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="status-field-container write-post-container">
+                    <div class="user-profile-box">
+                        <div class="user-profile">
+                            <img src="images/avatar/mew.jpg" alt="">
+                            <div>
+                                <p> Manh Cuong</p>
+                                <small>October 18 2023, 09.18 pm</small>
+                            </div>
+                        </div>
+                        <div>
+                            <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                        </div>
+                    </div>
+                    <div class="status-field">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis dolores praesentium dicta
+                            laborum nihil accusantium odit laboriosam, sed sit autem! <a
+                                href="#">#This_Post_is_Bigger!!!!</a>
+                        </p>
+                        <img src="images/status2.png" alt="">
+
+                    </div>
+                    <div class="post-reaction">
+                        <div class="activity-icons">
+                            <div><img src="images/like-blue.png" alt="">120</div>
+                            <div><img src="images/comments.png" alt="">52</div>
+                            <div><img src="images/share.png" alt="">35</div>
+                        </div>
+                        <div class="post-profile-picture">
+                            <img src="images/avatar/mew.jpg " alt=""> <i class=" fas fa-caret-down"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="status-field-container write-post-container">
+                    <div class="user-profile-box">
+                        <div class="user-profile">
+                            <img src="images/avatar/mew.jpg" alt="">
+                            <div>
+                                <p> Manh Cuong</p>
+                                <small>October 17 2023, 09.18 pm</small>
+                            </div>
+                        </div>
+                        <div>
+                            <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                        </div>
+                    </div>
+                    <div class="status-field">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis dolores praesentium dicta
+                            laborum nihil accusantium odit laboriosam, sed sit autem! <a
+                                href="#">#This_Post_is_faster!!!!</a>
+                        </p>
+                        <img src="images/status3.png" alt="">
+
+                    </div>
+                    <div class="post-reaction">
+                        <div class="activity-icons">
+                            <div><img src="images/like-blue.png" alt="">1340</div>
+                            <div><img src="images/comments.png" alt="">34</div>
+                            <div><img src="images/share.png" alt="">36</div>
+                        </div>
+                        <div class="post-profile-picture">
+                            <img src="images/avatar/mew.jpg " alt=""> <i class=" fas fa-caret-down"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="status-field-container write-post-container">
+                    <div class="user-profile-box">
+                        <div class="user-profile">
+                            <img src="images/profile-pic.png" alt="">
+                            <div>
+                                <p> Manh Cuong</p>
+                                <small>October 1962023, 09.18 pm</small>
+                            </div>
+                        </div>
+                        <div>
+                            <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                        </div>
+                    </div>
+                    <div class="status-field">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis dolores praesentium dicta
+                            laborum nihil accusantium odit laboriosam, sed sit autem! <a
+                                href="#">#This_Post_is_perfect!!!!</a>
+                        </p>
+                        <img src="images/status4.png" alt="">
+
+                    </div>
+                    <div class="post-reaction">
+                        <div class="activity-icons">
+                            <div><img src="images/like-blue.png" alt="">120</div>
+                            <div><img src="images/comments.png" alt="">52</div>
+                            <div><img src="images/share.png" alt="">35</div>
+                        </div>
+                        <div class="post-profile-picture">
+                            <img src="images/profile-pic.png " alt=""> <i class=" fas fa-caret-down"></i>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="btn-LoadMore" onclick="LoadMoreToggle()">Load More</button>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

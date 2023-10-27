@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cyrene society</title>
+	<!-- CSS and JavaScript references -->
+	<link rel="stylesheet" type="text/css" href="CSS/header.css">
+	<link rel="stylesheet" type="text/css" href="CSS/society.css">
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.min.css">
+	<script src="javascript/header.js"></script>
+	<script src="./javascript/society.js"></script>
+	<!-- Ending of CSS and JavaScrit -->
+
+	<style>
+		@font-face {
+			font-family: 'Tilt Neon';
+			src: url('../fonts/tiltNeon/static/TiltNeon-Regular.ttf') 
+		}
+
+		button,html,
+		*{
+			font-family: 'Tilt Neon';
+		}
+
+		*:not(:focus) {
+			caret-color: transparent; 
+		}
+
+		input:focus, textarea:focus, select:focus {
+			caret-color: auto; 
+		}
+	</style>
+
+</head>
+<body onload="loadconnection();">
+	<!-- Header start -->
+    <div class="header">
+        <!-- Wrapper start of heading-->
+        <div class="wrapper">
+            <div class="home-search">
+                <!-- logo -->
+                <a href="home.html"><img src="../images/logo/logo_Cyrene.png" width=35 height=35 class="logoletter"/></a>
+                <!-- Search bar -->
+                <form id="searching">
+                    <input type="text" name="search" placeholder="Search.." id="search">
+                </form>
+            </div>
+            
+            <!-- icon bar to navigate to all pages -->
+            <div > 
+                <ul class="icon-bar">
+                    <!-- home -->
+                    <li ><a href="home.html" onmouseover="headerchange(1);" onmouseout="headerorigin(1);"><img src="./images/icon/6b-home.png" id="Cyrene-home"></a></li>
+                    <!-- profile -->
+                    <li > <a href="profile.html" onmouseover="headerchange(2);" onmouseout="headerorigin(2);"><img src="images/icon/6b-user.png" id="Cyrene-profile"></a> </li>
+                    <!-- society -->
+                    <li><a href="society.html" onmouseover="headerchange(3);" onmouseout="headerorigin(3);"><img style="border-bottom: 3px solid #CF526F;" src="images/icon/Cyrene-group.png" id="Cyrene-society"></a></li>
+                    <!-- message -->
+                    <li > <a href="messages.html" onmouseover="headerchange(4);" onmouseout="headerorigin(4);"><img src="images/icon/6b-chat.png" id="Cyrene-message"></a></li>
+                    <!-- notification -->
+                </ul>	 
+            </div>
+            
+            
+            <!-- Notification and Myprofile -->
+            <div class="noti-info">
+                <a id="notifications" href="#" >
+                    <img src="images/icon/6b-ring.png" id="Cyrene-notification"></a>
+                    <div>
+                        <div id="notify">
+                            <div class="noti-list">
+                                <div class="dropdowns">
+                                    <span>4 New Notifications <a href="#" title="">Mark all as read</a></span>
+                                    <ul class="drops-menu">
+                                        <li>
+                                            <a href="#" title="">
+                                                <figure>
+                                                    <img src="../images/avatar/tretrau.jpg" alt="">
+                                                    <span class="status"></span>
+                                                </figure>
+                                                <div class="mesg-meta">
+                                                    <h4>Mạnh Cường</h4>
+                                                    <span>commented on your new profile status</span>
+                                                    <i>2 min ago</i>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="">
+                                                <figure>
+                                                    <img src="../images/avatar/Hanh.jpg" alt="">
+                                                    <span class="status"></span>
+                                                </figure>
+                                                <div class="mesg-meta">
+                                                    <h4>Anh Nguyễn</h4>
+                                                    <span>Nicholas Grissom just became friends. Write on his wall.</span>
+                                                    <i>4 hours ago</i>
+                                                    <figure>
+                                                        <span>Today is Anh Nguyen's Birthday! wish for celebrating</span>
+                                                        <img src="../images/icon/Cyrenre-birthday.png" alt="">
+                                                    </figure>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="">
+                                                <figure>
+                                                    <img src="images/avatar/linh.jpg" alt="">
+                                                    <span class="status"></span>
+                                                </figure>
+                                                <div class="mesg-meta">
+                                                    <h4>Nguyễn Linh</h4>
+                                                    <span>commented on your photo.</span>
+                                                    <i>Sunday</i>
+                                                    <figure>
+                                                        <span>"Celebrity looks Beautiful in that outfit! We should see each"</span>
+                                                        <img src="../images/icon/Cyrenre-cool.png" alt="">
+                                                    </figure>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="">
+                                                <figure>
+                                                    <img src="../images/avatar/mew.jpg" alt="">
+                                                    <span class="status"></span>
+                                                </figure>
+                                                <div class="mesg-meta">
+                                                    <h4>Quang Huy</h4>
+                                                    <span>nvited you to attend to his event Goo in</span>
+                                                    <i>May 19</i>
+                                                </div>
+                                            </a>
+                                            <!-- <span class="tag">New</span> -->
+                                        </li>
+                                        <li>
+                                            <a href="#" title="">
+                                                <figure>
+                                                    <img src="../images/avatar/default.jpg" alt="">
+                                                    <span class="status"></span>
+                                                </figure>
+                                                <div class="mesg-meta">
+                                                    <h4>Amy</h4>
+                                                    <span>Andrew Changed his profile picture. </span>
+                                                    <i>dec 18</i>
+                                                </div>
+                                            </a>
+                                            <!-- <span class="tag">New</span> -->
+                                        </li><li>
+                                            <a href="#" title="">
+                                                <figure>
+                                                    <img src="images/avatar/default.jpg" alt="">
+                                                    <span class="status"></span>
+                                                </figure>
+                                                <div class="mesg-meta">
+                                                    <h4>sarah Loren</h4>
+                                                    <span>commented on your new profile status</span>
+                                                    <i>oct 2</i>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="">
+                                                <figure>
+                                                    <img src="../images/avatar/default.jpg" alt="">
+                                                    <span class="status"></span>
+                                                </figure>
+                                                <div class="mesg-meta">
+                                                    <h4>Jhon doe</h4>
+                                                    <span>Nicholas Grissom just became friends. Write on his wall.</span>
+                                                    <i>nov 30</i>
+                                                    <figure>
+                                                        <span>Today is Marina Valentine’s Birthday! wish for celebrating</span>
+                                                        <img src="../images/icon/Cyrenre-birthday.png" alt="">
+                                                    </figure>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="">
+                                                <figure>
+                                                    <img src="../images/avatar/default.jpg" alt="">
+                                                    <span class="status"></span>
+                                                </figure>
+                                                <div class="mesg-meta">
+                                                    <h4>Andrew</h4>
+                                                    <span>commented on your photo.</span>
+                                                    <i>Sunday</i>
+                                                    <figure>
+                                                        <span>nvited you to attend to his event Goo in</span>
+                                                        
+                                                    </figure>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="">
+                                                <figure>
+                                                    <img src="../images/avatar/pngwing.com (4).png" alt="">
+                                                    <span class="status"></span>
+                                                </figure>
+                                                <div class="mesg-meta">
+                                                    <h4>Tom cruse</h4>
+                                                    <span>nvited you to attend to his event Goo in</span>
+                                                    <i>May 19</i>
+                                                </div>
+                                            </a>
+                                            <span class="tag">New</span>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="">
+                                                <figure>
+                                                    <img src="../images/avatar/default.jpg" alt="">
+                                                    <span class="status"></span>
+                                                </figure>
+                                                <div class="mesg-meta">
+                                                    <h4>Amy</h4>
+                                                    <span>Andrew Changed his profile picture. </span>
+                                                    <i>dec 18</i>
+                                                </div>
+                                            </a>
+                                            <span class="tag">New</span>
+                                        </li>
+                                    </ul>
+                                    <a href="#" title="" class="more-mesg">View All</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <img class="avt-header" id="avt-header" src="images/photo6.png" alt="">
+                    <div class="end-bt-hd" id="end-bt-hd">
+                        <div> 
+                            <i class="fa fa-cogs"></i><a href="#" >Setting & privacy</a>
+                        </div>
+                        <div>
+                            <i class="fa fa-question-circle"></i><a href="#">Help & support</a>
+                        </div>
+                        <div>
+                            <i class="fa fa-commenting-o"></i><a href="#">Give feedback</a>
+                        </div>
+                        <div>
+                            <i class="fa fa-moon-o" ></i><a style="padding-left: 0;" href="#">Display & Accessibility</a>
+                        </div>
+                        <div>
+                            <i class="fa fa-bars"></i><a href="#">Activity Log</a>
+                        </div>
+                        <div>
+                            <i class="fa fa-sign-out"></i><a href="index.html">Log out</a>
+                        </div>
+                    </div>
+            </div>
+
+        </div>
+        <!-- Wrapper End of heading -->
+
+    </div>
+    <!-- End of header -->
+
+    <script>
+        document.querySelector('#notifications').addEventListener('click', () => {
+			var notifyElement = document.querySelector('#notify');
+			if (notifyElement.style.display === 'block') {
+				notifyElement.style.display = 'none';
+			} else {
+				notifyElement.style.display = 'block';
+			}
+		});
+
+		document.querySelector('#avt-header').addEventListener('click', () => {
+			var notifyElement = document.querySelector('.end-bt-hd');
+			if (notifyElement.style.display === 'block') {
+				notifyElement.style.display = 'none';
+			} else {
+				notifyElement.style.display = 'block';
+			}
+		});
+    </script>
+
+
+		<!-- Start Left section -->
+		<div class="leftfixed">
+			<!-- start sidebar left -->
+			<div class="sidebarleft">
+				<img class="avt-profile" href="profile.html" src="/images/avatar/Hanh.jpg"/>
+				<a href="profile.html" id="sidename"> Nguyễn Hoàng Anh</a>
+				<div id="bio-profile">
+						<!-- <p class="fa fa-instagram " style="width: 20px;"></p> -->
+						<a href="#">Cyrene's founder</a>
+				</div>
+				<hr style="margin-bottom: 8px; color: #CF526F;">
+				<!-- giới thiệu -->
+				<ul class="intro-list">
+					<li class="intro">
+						<i class="fa fa-home"></i><p class="">Sống tại Hà Nội</p>
+					</li>
+					<li class="intro">
+						<i class="fa fa-university" style="font-size: 13px;"></i><p class="front-uni">Học tại</p><a href="#" class="uni">Đại học Phenikaa</a>
+					</li>
+                    <li class="intro">
+                        <i class="fa fa-user" style="font-size: 16px;"></i><p>Bạn bè: <span id="nosociety" style="color:red; font-size:14px;">31</span></p>
+                    </li>
+					<li class="intro">
+						<i class="fa fa-heart" style="font-size: 13px;"></i><p class="">Hẹn Hò</p>
+					</li>
+					<li class="intro link-ins">
+						<i class="fa fa-instagram " style="font-size: 16px;"></i><a class="ins">_calurda.d</a>
+					</li>
+				</ul>
+						  <!-- --- story --- -->
+				<div class="str-list">
+						<div ><img src="/images/avatar/hanhStory.jpg" alt=""></div>
+						<div><img src="/images/avatar/mayXanh.jpg" alt=""></div>
+						<div><img src="/images/avatar/hoanghon.jpg" alt=""></div>
+				</div>
+			</div>
+			<!-- End of sidebar left -->
+		</div> 
+		<!-- End of leftfixed -->
+
+
+			<!-- start of main content section -->
+			<div class="mainnotfixed">
+
+			  <!-- connection suggestion -->
+				<div class="people">
+				<!-- <div class="connection">
+					<img src="../images/profile/upload1.png">
+					<h5>User Name</h5>
+					<p>Secondary School</p>
+					<a href="#" id="connect6" onclick="changelogo1('connect6');" style="margin: 10px auto;">&#x271A; Connect</a>
+				</div> -->
+				</div>
+				<!-- end of connection suggestion -->
+
+				<!-- button to view more friends -->
+				<button type="button" id="viewmore" class="viewmore" onclick="loadconnection();">More</button>
+
+			</div>
+			<!-- end of main content section -->
+
+			<!-- start of right section suggestion user -->
+			<div class="rightfixed">
+				<div class="suggesfixed"><p id="suggestion">Suggestion</p><div>
+
+				<!-- Start of right fixed -->
+				<div class="sidebarright">
+
+					<!-- Start of right fixed -->
+					<div class="fr-suggest">
+
+						<!-- suggested user -->
+						<div class="rightcontent">
+							<img src="images/avatar/dua.jpg"/>
+							<p class="name">Bảo An </p>
+							<a href="#" id="connect1" onclick="changelogo('connect1');">&#x271A; Connect</a>
+
+						</div>
+
+						<div class="rightcontent">
+							<img src="images/avatar/anh.jpg"/>
+							<p class="name"> Vũ Hải Yến</p>
+							<a href="#" id="connect2" onclick="changelogo('connect2');">&#x271A; Connect</a>
+						</div>
+
+						<div class="rightcontent">
+							<img src="images/avatar/default.jpg"/>
+							<p class="name">Mai Linh</p>
+							<a href="#" id="connect3" onclick="changelogo('connect3');">&#x271A; Connect</a>
+						</div>
+
+						<div class="rightcontent">
+							<img src="images/avatar/qlinh.jpg"/>
+							<p class="name">Quốc Toàn</p>
+							<a href="#" id="connect4" onclick="changelogo('connect4');">&#x271A; Connect</a>
+						</div>
+
+						<div class="rightcontent">
+							<img src="images/avatar/aphuong.jpg"/>
+							<p class="name">Phan Anh Tuấn</p>
+							<a href="#" id="connect5" onclick="changelogo('connect5');">&#x271A; Connect</a>
+						</div>
+						<!-- End of sugested user -->
+						<hr class="hr-right" style="height: 1px;">
+					</div>
+					<!-- End of right fixed -->
+
+			</div>
+			<!-- End of right section suggestion user -->
+
+				<!-- Start of about cyrene -->
+								
+				<div class="aboutus">
+					<!-- <hr style="top: 5px;"> -->
+					<div class="foot">
+
+						<ul class="link">
+							<li><a href="">About</a></li>
+							<li><a href="">Contact</a></li>
+							<li><a href="">Privacy and Policy</a></li>
+							<li><a >Help</a></li>
+						</ul>
+						<ul class="icon">
+							<li><i class="fa fa-facebook-official" style="font-size: 20px;"></i></li>
+							<li><i class="fa fa-twitter-square" style="font-size: 20px;"></i></li>
+							<li><i class="fa fa-linkedin-square" style="font-size: 20px;"></i></li>
+							<li><i class="fa fa-github-square" style="font-size: 20px;"></i></li>
+						</ul>
+						<p style="margin-top: 7px;">Copyright © www.cyrene.com 2023 All Rights Reserved.</p>
+					</div>
+				</div>
+			
+				 <!-- End of about cyrene  -->
+
+			 
+
+		</div>
+		<!-- End of wrapper -->
+
+	</div>
+
+
+</body>
+</html>

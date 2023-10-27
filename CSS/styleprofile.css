@@ -1,0 +1,290 @@
+
+
+
+body{
+	height: 100%;
+	margin:0px;
+	padding:0px;
+	
+}
+
+.wrapper
+{
+	margin: 0 auto;
+	width: 960px;
+	height: 100%;
+}
+
+/*========HEADER SECTION ===========*/
+
+.header
+{
+	width: 100%;
+	height: 85px;
+	background-color: black;
+}
+
+
+.logoletter
+{
+	display: block;
+	padding-top:7px;
+	padding-bottom:5px;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+
+
+/*==========MAIN SECTION ========*/
+
+.main
+{
+	
+	width: 100%;
+	height: 100%;
+	background-color: white;
+	padding-bottom: 5%;
+}
+
+
+
+.signup /* ---- SIGNUP SECTION --- */
+{
+	font-size: 18px;
+	padding-top: 4%;
+
+}
+
+.signup img
+{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+	width: 700px;
+	height: 120px;
+}
+
+#signuptable
+{
+	width: 300px;
+	height: 370px;
+	background-color: rgb(255, 255, 245);
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid black;
+	border-radius: 10px;
+	padding: 12px;
+	position: relative;
+}
+
+#signuptable .inputtext2, select {
+	outline: none;
+}
+
+
+#signuptable select
+{
+	width: 262px;
+	height: 36px;
+	font-size: 18px;
+	border-radius: 5px;
+	border: 1px solid #bdc7d8;
+	padding-left: 10px;
+}
+
+.signup h1 /*---- SIGNUP HEADING --*/
+{
+	font-size: 45px;
+	margin: 0px;
+	padding-top: 10%;
+	padding-bottom: 4%;
+}
+
+.signup #signuptable .inputtext2
+{
+	width: 250px;
+	height: 32px;
+	font-size: 18px;
+	border-radius: 5px;
+	border: 1px solid #bdc7d8;
+	padding-left: 10px;
+}
+
+#signuptable tr td
+{
+	padding-bottom: 15px;
+	padding-right: 10px;
+}
+
+#nextbttn /*---JOING NOW BUTTON ---*/
+{
+
+	border:0px;
+	border-radius: 5px;
+	width: 100%;
+	height: 34px;
+	font-size: 18px;
+	font-weight: lighter;
+	background-color: black;
+	color: ivory;
+	/* box-shadow: 0 6px 4px #999; */
+}
+
+#nextbttn:hover
+{
+	/* background-color: black;
+	color: #CF526F; */
+	cursor: pointer;
+}
+
+#nextbut
+{
+	height: 60px;
+}
+
+
+#nextbttn:active
+{
+  /* background-color: #4CAF50;
+  box-shadow: 0 5px 4px #666;
+  transform: translateY(8px); */
+}
+
+#nextbttn:focus
+{
+	outline: 0px
+}
+
+/*====== FOOTER ===========*/
+
+#border { 
+	display: block;
+	align-items: center;
+	margin: 0 auto;
+	margin-bottom: 20px;
+	width: 400px;
+	border-top: 1px solid gray;
+}
+
+.footer
+{
+	/*height: 40px;*/
+	/* border-top: 1px solid #ECECEC; */
+	
+}
+
+.foot
+{
+	background-color: white;
+	text-align: center;
+}
+
+.foot ul
+{
+	padding: 5px;
+	list-style-type: none;
+	text-align: center;
+	margin: 10px;
+	border-radius: 5px;
+}
+
+.foot ul li
+{
+	display: inline;
+}
+
+.foot ul li a
+{
+	text-decoration: none;
+	padding: 10px;
+	color: #615D5E;
+	font-size: 16px;
+}
+
+.foot ul li a:hover
+{
+	color: #CF526F;
+	font-size: 17px;
+	text-decoration: underline;
+}
+
+.foot p
+{
+	color: #666666;
+	text-align: center;
+	font-size: 14px;
+	padding-top: 8px;
+	padding-bottom: 2%;
+}
+
+/*----Removing the number increment in input --*/
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+input[type="file"] {
+	display: inline;
+	border: 2px solid red;
+	position: absolute;
+	left: 12px;
+	width: 85%;
+	height: 30px;
+	opacity: 0;
+
+}
+
+
+.uploadButton {
+	display: inline;
+	background-color: white;
+	border: 1px solid gray;
+	border-radius: 5px;
+	margin: 0px;
+	padding: 0px;
+	font-size: 16px;
+	width: 70%;
+	height: 30px;
+	color: black;
+	/* transition: width 1s ease-in-out; */
+	cursor: pointer;
+
+}
+
+.uploadButton:hover {
+	cursor: pointer;
+
+}
+
+#myFile:hover {
+	/* cursor: pointer; */
+}
+
+#load1
+{
+	border-radius: 50%;
+}
+
+.logoletter:hover
+{
+	animation: shake 0.5s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
